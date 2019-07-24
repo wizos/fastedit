@@ -282,20 +282,23 @@ public class FastEdit extends RelativeLayout {
     }
 
     protected void onClickPos(MotionEvent e) {
+
         int cursorPos = getCursorPos(e.getX(), e.getY());
         if (!selectModel.isSelected() && !editBar.isShowing() && cursorPos == FastEdit.this.cursorPos) {
+            //显示编辑菜单
             showEditBar();
-            return;
+        } else {
+            //更新光标位置
+            setCursorPos(cursorPos);
+            //更新光标列
+            updateCursorCol();
+            //取消选择
+            selectModel.cancel();
+            //重新绘制
+            postInvalidate();
         }
-        setCursorPos(cursorPos);
         //显示输入法
         showInputBord();
-        //更新光标列
-        updateCursorCol();
-        //取消选择
-        selectModel.cancel();
-        //重新绘制
-        postInvalidate();
     }
 
     /**
