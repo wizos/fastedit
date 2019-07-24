@@ -1,5 +1,5 @@
 #### 介绍
-安卓端高性能输入框，支持100万文字流畅显示，可用于开发语法高亮代码编辑器。
+安卓端高性能输入框，支持100万文字流畅显示与编辑，可用于开发语法高亮代码编辑器。
 #### 使用方法
 ```java
 public class MainActivity extends AppCompatActivity {
