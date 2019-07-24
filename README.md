@@ -1,5 +1,19 @@
 #### 介绍
 安卓端高性能输入框，支持100万文字流畅显示与编辑，可用于开发语法高亮代码编辑器。
+#### 依赖
+```
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://www.jitpack.io' }
+    }
+}
+```
+```
+dependencies {
+    implementation 'com.github.CodeNeedWho:fastedit:v1.0'
+}
+```
 #### 使用方法
 ```java
 public class MainActivity extends AppCompatActivity {
