@@ -1,7 +1,5 @@
 package jx.ym.fastedit;
 
-import android.annotation.NonNull;
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.BlurMaskFilter;
@@ -60,7 +58,7 @@ public class SelectBar extends PopupWindow implements View.OnClickListener {
         setBackgroundDrawable(null);
         contentView.setBackgroundDrawable(new Drawable() {
             @Override
-            public void draw(@NonNull Canvas canvas) {
+            public void draw(Canvas canvas) {
                 int shadowWidth = contentView.getPaddingTop();
                 paint.setColor(0x33000000);
                 paint.setMaskFilter(new BlurMaskFilter(shadowWidth, BlurMaskFilter.Blur.OUTER));
@@ -91,7 +89,6 @@ public class SelectBar extends PopupWindow implements View.OnClickListener {
             }
 
 
-            @SuppressLint("WrongConstant")
             @Override
             public int getOpacity() {
                 return 0;
